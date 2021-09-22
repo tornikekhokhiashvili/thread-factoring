@@ -1,9 +1,9 @@
 # Thread Factoring 
 
 ## Description 
-1. Implement [`com.epam.rd.autotasks.ThreadUnion`](src/main/java/com/epam/rd/autotasks/ThreadUnion.java) `getInstance` method.
+1. Implement the `getInstance` method of [`com.epam.rd.autotasks.ThreadUnion`](src/main/java/com/epam/rd/autotasks/ThreadUnion.java).
 2. It should return a `ThreadUnion` instance.
-3. Thread Union is a named Thread factory that creates threads, monitors their execution results and allows their bunch shutdown.
+3. `ThreadUnion` is a named `ThreadFactory` that creates threads, monitors their execution results, and allows to call the operation of their group shutdown.
 
 Methods description:
 
@@ -18,4 +18,4 @@ Methods description:
 | `boolean isFinished()` | Checks if a ThreadUnion was shutdown and all of created threads ahs finished.|
 | `List<FinishedThreadResult> results()` | Returns a list of results of finished threads. No results must be returned for threads that are not finished yet. A result must contain a thread name, a timestamp when it finished execution and a Throwable if it was thrown | 
 
-Note, that your `ThreadUnion` implementation should be threadsafe and support concurrent thread generating.  
+ Note that your `ThreadUnion` implementation should be thread-safe and support concurrent thread generating.  
